@@ -20,7 +20,14 @@ end
 # ゆうしゃ は 装備品 を 調達した
 # 魔王 は 魔法 を 使える
 def scene_c
-
+  @hero = hero.new('もよもと', 280, 10, 14, 5, 5)
+  @monster = Satan.new('りゅうおう', 300, 30, 12, 5, 6)
+  @equipment = Weapon.new('はじゃのつるぎ',42)
+  @equipment = Armor.new('てつのよろい',38)
+  @hero.weapon = @epuipment1
+  @hero.armor = @equipment2
+  @magic = Magic.new('メラゾーマ', 70, 15)
+  @monster.magic_skill = @magic
 end
 
 # 魔王 と 勇者 は 回復魔法を覚えた
