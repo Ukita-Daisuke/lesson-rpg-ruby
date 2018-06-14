@@ -1,4 +1,6 @@
-# encoding: utf-8
+
+
+ # encoding: utf-8
 Dir['./model/*.rb'].each { |file| require file }
 
 class GameController

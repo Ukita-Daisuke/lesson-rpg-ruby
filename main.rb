@@ -22,10 +22,8 @@ end
 def scene_c
   @hero = hero.new('もよもと', 280, 10, 14, 5, 5)
   @monster = Satan.new('りゅうおう', 300, 30, 12, 5, 6)
-  @equipment = Weapon.new('はじゃのつるぎ',42)
-  @equipment = Armor.new('てつのよろい',38)
-  @hero.weapon = @epuipment1
-  @hero.armor = @equipment2
+  @hero.weapon = Item.new('はじゃのつるぎ',42,0)
+  @hero.armor = Item.new('てつのよろい',0,38)
   @magic = Magic.new('メラゾーマ', 70, 15)
   @monster.magic_skill = @magic
 end
@@ -38,7 +36,7 @@ def scene_d
 end
 
 def main
-  scene_b
+  scene_c
   game = GameController.new(@hero, @monster)
   game.run
 end
