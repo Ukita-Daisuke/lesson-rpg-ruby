@@ -32,7 +32,14 @@ end
 # ゆうしゃ は 装備品 を 調達した
 # 魔王 は 魔法 を 使える
 def scene_d
-
+  @hero = hero.new('もよもと', 280, 10, 14, 5, 5)
+  @monster = Satan.new('りゅうおう', 300, 30, 12, 5, 6)
+  @hero.weapon = Item.new('はじゃのつるぎ',42,0)
+  @hero.armor = Item.new('てつのよろい',0,38)
+  @magic = Magic.new('ホイミ',0,3)
+  @hero =
+  @magic = Magic.new('メラゾーマ', 70, 15)
+  @monster.magic_skill = @magic
 end
 
 def main
